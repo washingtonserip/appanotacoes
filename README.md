@@ -14,9 +14,8 @@ Está é a projeção de como o App vai ficar depois de pronto:
 * (x) Criação do design do App
 * (x) Definição das tarefas
 * (x) Implementação Webpack
-* (&nbsp;&nbsp;) Instalar dependências
 * (&nbsp;&nbsp;) Adicionar icones SVG
-* (&nbsp;&nbsp;) Componente de topo
+* (x) Componente de topo
 * (&nbsp;&nbsp;) Componente de busca
 * (&nbsp;&nbsp;) Componente nota
 * (&nbsp;&nbsp;) Comportamento de edição no componente de nota
