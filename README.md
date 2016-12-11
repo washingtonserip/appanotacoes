@@ -1,8 +1,8 @@
-# AppAnotacoes
+# App Anotações
 
 > Um Web App de anotações em VueJS
 
-Acesse este projeto em seu navegador: [AppANotacoes.com.br](http://appanotacoes.com.br/)
+Acesse este projeto em seu navegador: [AppAnotacoes.com.br](http://appanotacoes.com.br/)
 
 ## Desgin
 Está é a projeção de como o App vai ficar depois de pronto:
