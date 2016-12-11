@@ -6,6 +6,7 @@ Acesse este projeto em seu navegador: [AppANotacoes.com.br](http://appanotacoes.
 
 ## Desgin
 Está é a projeção de como o App vai ficar depois de pronto:
+
 ![Projeção do App](screenshots/projecao-app.png)
 
 ## Build Setup
