@@ -34,24 +34,24 @@ yarn test
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 ## Tarefas
-(X) Criação do projeto
-(X) Criação do design do App
-(X) Definição das tarefas
-(X) Implementação Webpack
-( ) Instalar dependências
-( ) Adicionar icones SVG
-( ) Componente de topo
-( ) Componente de busca
-( ) Componente nota
-( ) Comportamento de edição no componente de nota
-( ) Componente de aviso
-( ) Componente de nova nota
-( ) Implementar o PouchDB
-( ) Função de salvar uma nota
-( ) Função de marcar uma nota como favorita
-( ) Função de excluir uma nota
-( ) Implementar suporte a páginas
-( ) Componente de Página
-( ) Componente de Menu
-( ) Função pesquisar por notas
-( ) Listagem de notas favoritadas
+* (X) Criação do projeto
+* (X) Criação do design do App
+* (X) Definição das tarefas
+* (X) Implementação Webpack
+* ( ) Instalar dependências
+* ( ) Adicionar icones SVG
+* ( ) Componente de topo
+* ( ) Componente de busca
+* ( ) Componente nota
+* ( ) Comportamento de edição no componente de nota
+* ( ) Componente de aviso
+* ( ) Componente de nova nota
+* ( ) Implementar o PouchDB
+* ( ) Função de salvar uma nota
+* ( ) Função de marcar uma nota como favorita
+* ( ) Função de excluir uma nota
+* ( ) Implementar suporte a páginas
+* ( ) Componente de Página
+* ( ) Componente de Menu
+* ( ) Função pesquisar por notas
+* ( ) Listagem de notas favoritadas
