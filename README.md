@@ -4,6 +4,10 @@
 
 Acesse este projeto em seu navegador: [AppANotacoes.com.br](http://appanotacoes.com.br/)
 
+## Desgin
+Está é a projeção de como o App vai ficar depois de pronto:
+![Projeção do App](screenshots/projecao-app.png)
+
 ## Build Setup
 
 ``` bash
@@ -27,6 +31,3 @@ yarn test
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-
-## Desgin
-![Projeção do App](screenshots/projecao-app.png)
