@@ -10,27 +10,27 @@ Está é a projeção de como o App vai ficar depois de pronto:
 ![Projeção do App](screenshots/projecao-app.png)
 
 ## Tarefas
-* (X) Criação do projeto
-* (X) Criação do design do App
-* (X) Definição das tarefas
-* (X) Implementação Webpack
-* (&nbsp;) Instalar dependências
-* (&nbsp;) Adicionar icones SVG
-* (&nbsp;) Componente de topo
-* (&nbsp;) Componente de busca
-* (&nbsp;) Componente nota
-* (&nbsp;) Comportamento de edição no componente de nota
-* (&nbsp;) Componente de aviso
-* (&nbsp;) Componente de nova nota
-* (&nbsp;) Implementar o PouchDB
-* (&nbsp;) Função de salvar uma nota
-* (&nbsp;) Função de marcar uma nota como favorita
-* (&nbsp;) Função de excluir uma nota
-* (&nbsp;) Implementar suporte a páginas
-* (&nbsp;) Componente de Página
-* (&nbsp;) Componente de Menu
-* (&nbsp;) Função pesquisar por notas
-* (&nbsp;) Listagem de notas favoritadas
+* (x) Criação do projeto
+* (x) Criação do design do App
+* (x) Definição das tarefas
+* (x) Implementação Webpack
+* (&nbsp;&nbsp;) Instalar dependências
+* (&nbsp;&nbsp;) Adicionar icones SVG
+* (&nbsp;&nbsp;) Componente de topo
+* (&nbsp;&nbsp;) Componente de busca
+* (&nbsp;&nbsp;) Componente nota
+* (&nbsp;&nbsp;) Comportamento de edição no componente de nota
+* (&nbsp;&nbsp;) Componente de aviso
+* (&nbsp;&nbsp;) Componente de nova nota
+* (&nbsp;&nbsp;) Implementar o PouchDB
+* (&nbsp;&nbsp;) Função de salvar uma nota
+* (&nbsp;&nbsp;) Função de marcar uma nota como favorita
+* (&nbsp;&nbsp;) Função de excluir uma nota
+* (&nbsp;&nbsp;) Implementar suporte a páginas
+* (&nbsp;&nbsp;) Componente de Página
+* (&nbsp;&nbsp;) Componente de Menu
+* (&nbsp;&nbsp;) Função pesquisar por notas
+* (&nbsp;&nbsp;) Listagem de notas favoritadas
 
 ## Build Setup
 
