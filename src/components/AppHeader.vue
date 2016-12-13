@@ -68,6 +68,7 @@
       cursor pointer
       height 1.83rem
       width 1.83rem
+      background-size 1.83rem
 
       &--menu
         @extend .AppHeader__Icon
