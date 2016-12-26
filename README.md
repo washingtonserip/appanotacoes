@@ -9,18 +9,18 @@ Está é a projeção de como o App vai ficar depois de pronto:
 
 ![Projeção do App](screenshots/projecao-app.png)
 
-## Tarefas
+## Tarefas (7/20)
 * (x) Criação do projeto
 * (x) Criação do design do App
 * (x) Definição das tarefas
 * (x) Implementação Webpack
 * (&nbsp;&nbsp;) Adicionar icones SVG
 * (x) Componente de topo
-* (&nbsp;&nbsp;) Componente de busca
+* (x) Componente de busca
 * (&nbsp;&nbsp;) Componente anotação
 * (&nbsp;&nbsp;) Comportamento de edição no componente de anotação
 * (&nbsp;&nbsp;) Componente de aviso
-* (&nbsp;&nbsp;) Componente de nova anotação
+* (x) Componente de nova anotação
 * (&nbsp;&nbsp;) Implementar o PouchDB
 * (&nbsp;&nbsp;) Função de salvar uma anotação
 * (&nbsp;&nbsp;) Função de marcar uma anotação como favorita
