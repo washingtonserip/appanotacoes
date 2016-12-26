@@ -17,19 +17,19 @@ Está é a projeção de como o App vai ficar depois de pronto:
 * (&nbsp;&nbsp;) Adicionar icones SVG
 * (x) Componente de topo
 * (&nbsp;&nbsp;) Componente de busca
-* (&nbsp;&nbsp;) Componente nota
-* (&nbsp;&nbsp;) Comportamento de edição no componente de nota
+* (&nbsp;&nbsp;) Componente anotação
+* (&nbsp;&nbsp;) Comportamento de edição no componente de anotação
 * (&nbsp;&nbsp;) Componente de aviso
-* (&nbsp;&nbsp;) Componente de nova nota
+* (&nbsp;&nbsp;) Componente de nova anotação
 * (&nbsp;&nbsp;) Implementar o PouchDB
-* (&nbsp;&nbsp;) Função de salvar uma nota
-* (&nbsp;&nbsp;) Função de marcar uma nota como favorita
-* (&nbsp;&nbsp;) Função de excluir uma nota
+* (&nbsp;&nbsp;) Função de salvar uma anotação
+* (&nbsp;&nbsp;) Função de marcar uma anotação como favorita
+* (&nbsp;&nbsp;) Função de excluir uma anotação
 * (&nbsp;&nbsp;) Implementar suporte a páginas
 * (&nbsp;&nbsp;) Componente de Página
 * (&nbsp;&nbsp;) Componente de Menu
-* (&nbsp;&nbsp;) Função pesquisar por notas
-* (&nbsp;&nbsp;) Listagem de notas favoritadas
+* (&nbsp;&nbsp;) Função pesquisar por anotações
+* (&nbsp;&nbsp;) Listagem de anotações favoritadas
 
 ## Build Setup
 

@@ -5,7 +5,7 @@
                 <input type="text"
                     class="SearchBar__Field"
                     name="search"
-                    placeholder="Pesquise por notas...">
+                    placeholder="Pesquise por anotações...">
 
                 <button type="button"
                     class="SearchBar__Btn"

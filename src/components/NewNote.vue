@@ -4,7 +4,7 @@
             <div class="NewNote__Box">
                 <textarea name="note"
                     class="NewNote__Field"
-                    placeholder="Criar uma nova nota"></textarea>
+                    placeholder="Criar uma nova anotação"></textarea>
 
                 <button type="button"
                     name="create-note"
