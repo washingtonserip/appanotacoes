@@ -27,7 +27,6 @@
 
     .SearchBar
         background-color rgba(65,130,214,1)
-        font-family "Open Sans", sans-serif
 
         & .General__Container
             padding-top 1.458vh
@@ -43,7 +42,6 @@
             border none
             height 6.459vh
             min-height 35px
-            width 90%
             width calc(100% - (2rem + 4%))
             padding-left 2%
 
@@ -53,11 +51,12 @@
             background-size 1.166rem
             background-repeat no-repeat
             background-position center
+            float right
             border none
             cursor pointer
             height 6.459vh
             min-height 35px
-            text-indent -9999px
             padding 0 2%
+            text-indent -9999px
             width calc(1.6rem + 4%)
 </style>

@@ -37,7 +37,6 @@
 
     .AppHeader
         background-color rgba(50,99,163,1)
-        font-family "Open Sans", sans-serif
         text-align center
 
         & .General__Container
