@@ -30,8 +30,6 @@
         font-family "Open Sans", sans-serif
 
         & .General__Container
-            height 9.375vh
-            min-height 45px
             padding-top 1.458vh
             padding-bottom 1.458vh
 
@@ -62,5 +60,4 @@
             text-indent -9999px
             padding 0 2%
             width calc(1.6rem + 4%)
-            /*width 2rem*/
 </style>
