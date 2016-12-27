@@ -1,14 +1,18 @@
 <template lang="html">
     <div class="BottomBar">
+        <notification-bar></notification-bar>
+
         <new-note></new-note>
     </div>
 </template>
 
 <script type="text/babel">
+    import NotificationBar from './NotificationBar';
     import NewNote from './NewNote';
 
     export default {
         components: {
+            NotificationBar,
             NewNote,
         },
     };

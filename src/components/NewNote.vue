@@ -22,7 +22,7 @@
 </script>
 
 <style lang="stylus">
-    .BottomBar
+    .NewNote
         background-color rgba(65,130,214,1)
 
         & .General__Container

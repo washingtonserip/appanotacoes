@@ -19,7 +19,7 @@ Está é a projeção de como o App vai ficar depois de pronto:
 * (x) Componente de busca
 * (&nbsp;&nbsp;) Componente anotação
 * (&nbsp;&nbsp;) Comportamento de edição no componente de anotação
-* (&nbsp;&nbsp;) Componente de aviso
+* (x) Componente de aviso
 * (x) Componente de nova anotação
 * (&nbsp;&nbsp;) Implementar o PouchDB
 * (&nbsp;&nbsp;) Função de salvar uma anotação

@@ -78,6 +78,6 @@
                 background-image url("../assets/svg/bookmarks.svg")
 
         .__Title
-            color #FFF
+            color rgb(255,255,255)
             font-size 1.416rem
 </style>
