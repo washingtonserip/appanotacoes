@@ -20,18 +20,19 @@
 
 <style lang="stylus">
     .Annotation
-        background-color rgba(255,255,255,1)
+        background-color rgba(65,130,214,1)
         border 1px solid rgba(65,130,214,1)
         overflow hidden
         margin-bottom 10px
 
     +prefix-classes("Annotation")
         .__Text
+            background-color rgba(255,255,255,1)
             color #333
             float left
             font-size 1.3rem
-            height 12vh
-            min-height 60px
+            /*height 12vh*/
+            min-height 70px
             overflow auto
             line-height 2.2rem
             padding 12px 15px 14px
@@ -43,10 +44,8 @@
                 line-height 1.9rem
 
         .__Options
-            background rgba(65,130,214,1)
             float right
-            height 12vh
-            min-height 60px
+            height 70px
             padding 5px 0
             width 36px
 
@@ -57,8 +56,7 @@
             background-position center
             border none
             cursor pointer
-            height calc((12vh - 10px) / 2)
-            min-height 25px
+            height 30px
             width 36px
 
             &--favorite
