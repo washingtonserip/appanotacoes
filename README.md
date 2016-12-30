@@ -2,22 +2,21 @@
 
 > Um Web App de anotações em VueJS
 
-Acesse este projeto em seu navegador: [AppAnotacoes.com.br](http://appanotacoes.com.br/)
+Acesse este projeto em seu navegador: [AppAnotacoes.com.br](http://appanotacoes.com.br/) *(em desenvolvimento)*
 
 ## Design
 Está é a projeção de como o App vai ficar depois de pronto:
 
 ![Projeção do App](screenshots/projecao-app.png)
 
-## Tarefas (7/20)
+## Tarefas (9/20)
 * (x) Criação do projeto
 * (x) Criação do design do App
 * (x) Definição das tarefas
 * (x) Implementação Webpack
-* (&nbsp;&nbsp;) Adicionar icones SVG
 * (x) Componente de topo
 * (x) Componente de busca
-* (&nbsp;&nbsp;) Componente anotação
+* (x) Componente anotação
 * (&nbsp;&nbsp;) Comportamento de edição no componente de anotação
 * (x) Componente de aviso
 * (x) Componente de nova anotação
@@ -30,6 +29,7 @@ Está é a projeção de como o App vai ficar depois de pronto:
 * (&nbsp;&nbsp;) Componente de Menu
 * (&nbsp;&nbsp;) Função pesquisar por anotações
 * (&nbsp;&nbsp;) Listagem de anotações favoritadas
+* (&nbsp;&nbsp;) Componente de modal de aviso
 
 ## Build Setup
 
