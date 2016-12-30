@@ -31,6 +31,7 @@
             float left
             font-size 1.3rem
             height 12vh
+            min-height 60px
             overflow auto
             line-height 2.2rem
             padding 12px 15px 14px
@@ -45,6 +46,7 @@
             background rgba(65,130,214,1)
             float right
             height 12vh
+            min-height 60px
             padding 5px 0
             width 36px
 
@@ -56,6 +58,7 @@
             border none
             cursor pointer
             height calc((12vh - 10px) / 2)
+            min-height 25px
             width 36px
 
             &--favorite
