@@ -52,7 +52,7 @@
         .__Box
             background-color rgba(255,255,255,1)
             position fixed
-            margin -54px 0 0 -155px
+            margin -57px 0 0 -155px
             width 310px
             padding 20px 15px
             left 50%

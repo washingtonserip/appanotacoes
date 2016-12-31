@@ -13,6 +13,7 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "dependencies": {
+    "pouchdb": "^6.1.0",
     "vue": "^2.1.0"
   },
   "devDependencies": {

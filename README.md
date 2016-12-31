@@ -9,7 +9,7 @@ Está é a projeção de como o App vai ficar depois de pronto:
 
 ![Projeção do App](screenshots/projecao-app.png)
 
-## Tarefas (11/20)
+## Tarefas (13/21)
 * (x) Criação do projeto
 * (x) Criação do design do App
 * (x) Definição das tarefas
@@ -21,7 +21,7 @@ Está é a projeção de como o App vai ficar depois de pronto:
 * (x) Componente de aviso
 * (x) Componente de nova anotação
 * (&nbsp;&nbsp;) Implementar o PouchDB
-* (&nbsp;&nbsp;) Função de salvar uma anotação
+* (x) Função de salvar uma anotação
 * (&nbsp;&nbsp;) Função de marcar uma anotação como favorita
 * (&nbsp;&nbsp;) Função de excluir uma anotação
 * (&nbsp;&nbsp;) Implementar suporte a páginas
@@ -30,6 +30,7 @@ Está é a projeção de como o App vai ficar depois de pronto:
 * (&nbsp;&nbsp;) Função pesquisar por anotações
 * (&nbsp;&nbsp;) Listagem de anotações favoritadas
 * (x) Componente de modal de aviso inicial
+* (x) Balão de aviso
 
 ## Build Setup
 

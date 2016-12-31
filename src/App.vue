@@ -23,6 +23,7 @@
     export default {
         data() {
             return {
+                allAnnotations: [],
                 initialNoticeStatus: true,
             };
         },
@@ -37,6 +38,8 @@
             changeInitialNoticeStatus(status) {
                 this.initialNoticeStatus = status;
             },
+        },
+        mounted() {
         },
     };
 </script>
