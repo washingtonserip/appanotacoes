@@ -1,7 +1,8 @@
 <template lang="html">
     <div class="NotesList">
         <div class="General__Container">
-            <annotation v-for="n in 8"></annotation>
+            <annotation v-for="annotation in annotations"
+                v-bind:annotation="annotation.doc"></annotation>
         </div>
     </div>
 </template>
@@ -10,10 +11,16 @@
     import Annotation from './Annotation';
 
     export default {
+        props: {
+            annotations: {
+                type: Array,
+                default() {
+                    return [];
+                },
+            },
+        },
         components: {
             Annotation,
-        },
-        mounted() {
         },
     };
 </script>

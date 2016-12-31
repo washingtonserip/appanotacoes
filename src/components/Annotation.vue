@@ -1,7 +1,8 @@
 <template lang="html">
-    <div class="Annotation">
+    <div class="Annotation"
+        v-show="annotation">
         <div class="Annotation__Text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            {{ annotation.text }}
         </div>
 
         <div class="Annotation__Options">
@@ -13,6 +14,14 @@
 
 <script type="text/babel">
     export default {
+        props: {
+            annotation: {
+                type: Object,
+                default() {
+                    return null;
+                },
+            },
+        },
         mounted() {
         },
     };
