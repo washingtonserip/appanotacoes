@@ -1,18 +1,26 @@
 <template>
-    <div class="AppHeader">
-        <div class="General__Container AppHeader__Flexbox">
-            <div class="AppHeader__Icon--menu AppHeader__FlexboxItem"></div>
+    <div>
+        <main-menu v-bind:open="menuStatus"
+            v-on:CLOSE_MENU="changeMenuStatus"></main-menu>
 
-            <div class="AppHeader__Title AppHeader__FlexboxItem">
-                {{ pageTitle }}
+        <div class="AppHeader">
+            <div class="General__Container AppHeader__Flexbox">
+                <div class="AppHeader__Icon--menu AppHeader__FlexboxItem"
+                    v-on:click="menuStatus = true"></div>
+
+                <div class="AppHeader__Title AppHeader__FlexboxItem">
+                    {{ pageTitle }}
+                </div>
+
+                <div class="AppHeader__Icon--bookmarks AppHeader__FlexboxItem"></div>
             </div>
-
-            <div class="AppHeader__Icon--bookmarks AppHeader__FlexboxItem"></div>
         </div>
     </div>
 </template>
 
 <script type="text/babel">
+    import MainMenu from './MainMenu';
+
     export default {
         props: {
             pageTitle: {
@@ -24,11 +32,17 @@
         },
         data() {
             return {
-
+                menuStatus: false,
             };
         },
-        computed: {},
-        methods: {},
+        components: {
+            MainMenu,
+        },
+        methods: {
+            changeMenuStatus(status) {
+                this.menuStatus = status;
+            },
+        },
     };
 </script>
 

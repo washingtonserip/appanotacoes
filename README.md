@@ -26,7 +26,7 @@ Está é a projeção de como o App vai ficar depois de pronto:
 * (&nbsp;&nbsp;) Função de excluir uma anotação
 * (&nbsp;&nbsp;) Implementar suporte a páginas
 * (&nbsp;&nbsp;) Componente de Página
-* (&nbsp;&nbsp;) Componente de Menu
+* (x) Componente de Menu
 * (&nbsp;&nbsp;) Função pesquisar por anotações
 * (&nbsp;&nbsp;) Listagem de anotações favoritadas
 * (&nbsp;&nbsp;) Componente de modal de aviso
