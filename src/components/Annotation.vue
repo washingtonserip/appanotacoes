@@ -1,13 +1,31 @@
 <template lang="html">
     <div class="Annotation"
+        v-bind:class="{ Annotation__Active: editMode }"
         v-show="annotation">
-        <div class="Annotation__Text">
+        <textarea class="Annotation__Textarea"
+            ref="annotationtextarea"
+            v-model="annotation.text"
+            v-bind:style="{ height: annotationHeight }"
+            v-show="editMode"></textarea>
+
+        <div class="Annotation__Text"
+            ref="testeste"
+            v-show="!editMode">
             {{ annotation.text }}
         </div>
 
         <div class="Annotation__Options">
-            <button class="Annotation__OptionsBtn--favorite"></button>
-            <button class="Annotation__OptionsBtn--edit"></button>
+            <button class="Annotation__OptionsBtn--favorite"
+                v-show="!editMode"></button>
+            <button class="Annotation__OptionsBtn--edit"
+                v-show="!editMode"
+                v-on:click="editMode = true"></button>
+
+            <button class="Annotation__OptionsBtn--delete"
+                v-show="editMode"></button>
+            <button class="Annotation__OptionsBtn--check"
+                v-show="editMode"
+                v-on:click="editMode = false"></button>
         </div>
     </div>
 </template>
@@ -22,7 +40,16 @@
                 },
             },
         },
-        mounted() {
+        data() {
+            return {
+                editMode: false,
+                annotationHeight: '',
+            };
+        },
+        watch: {
+            editMode() {
+                this.annotationHeight = `${this.$refs.testeste.offsetHeight}px`;
+            },
         },
     };
 </script>
@@ -35,6 +62,9 @@
         margin-bottom 10px
 
     +prefix-classes("Annotation")
+        .__Active
+            background-color rgba(50,99,163,1)
+
         .__Text
             background-color rgba(255,255,255,1)
             color #333
@@ -50,6 +80,11 @@
                 @extend .Annotation__Text
                 font-size 1.7rem
                 line-height 1.9rem
+
+        .__Textarea
+            @extend .Annotation__Text
+            border none
+            resize none
 
         .__Options
             float right
@@ -74,4 +109,12 @@
             &--edit
                 @extend .Annotation__OptionsBtn
                 background-image url("../assets/svg/edit.svg")
+
+            &--delete
+                @extend .Annotation__OptionsBtn
+                background-image url("../assets/svg/x.svg")
+
+            &--check
+                @extend .Annotation__OptionsBtn
+                background-image url("../assets/svg/check.svg")
 </style>

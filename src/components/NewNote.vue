@@ -20,7 +20,6 @@
         data() {
             return {
                 annotationText: '',
-                alertText: '',
             };
         },
         methods: {

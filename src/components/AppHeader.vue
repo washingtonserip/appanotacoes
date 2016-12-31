@@ -12,7 +12,8 @@
                     {{ pageTitle }}
                 </div>
 
-                <div class="AppHeader__Icon--bookmarks AppHeader__FlexboxItem"></div>
+                <router-link to="/favorites"
+                    class="AppHeader__Icon--bookmarks AppHeader__FlexboxItem"></router-link>
             </div>
         </div>
     </div>

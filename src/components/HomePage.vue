@@ -32,6 +32,7 @@
         data() {
             return {
                 allAnnotations: [],
+                alertText: '',
             };
         },
         components: {
@@ -72,7 +73,7 @@
 
                         setTimeout(() => {
                             this.alertText = '';
-                        }, 5000);
+                        }, 4000);
                     }
                 });
             },
