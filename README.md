@@ -9,7 +9,7 @@ Está é a projeção de como o App vai ficar depois de pronto:
 
 ![Projeção do App](screenshots/projecao-app.png)
 
-## Tarefas (9/20)
+## Tarefas (11/20)
 * (x) Criação do projeto
 * (x) Criação do design do App
 * (x) Definição das tarefas
@@ -29,7 +29,7 @@ Está é a projeção de como o App vai ficar depois de pronto:
 * (x) Componente de Menu
 * (&nbsp;&nbsp;) Função pesquisar por anotações
 * (&nbsp;&nbsp;) Listagem de anotações favoritadas
-* (&nbsp;&nbsp;) Componente de modal de aviso
+* (x) Componente de modal de aviso inicial
 
 ## Build Setup
 

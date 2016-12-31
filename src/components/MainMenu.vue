@@ -1,5 +1,6 @@
 <template lang="html">
-    <div class="MainMenu" v-show="open">
+    <div class="MainMenu"
+        v-show="open">
         <div class="MainMenu__Mask"
             v-on:click="closeMenu"></div>
 
@@ -69,4 +70,5 @@
 
                 &.__Sidebar--active
                     background-color rgba(65,130,214,1)
+                    border-right 5px solid rgb(255,255,255)
 </style>

@@ -28,10 +28,9 @@
     +prefix-classes("Annotation")
         .__Text
             background-color rgba(255,255,255,1)
-            color #333
+            color rgb(51,51,51)
             float left
             font-size 1.3rem
-            /*height 12vh*/
             min-height 70px
             overflow auto
             line-height 2.2rem
