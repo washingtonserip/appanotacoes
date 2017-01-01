@@ -1,12 +1,21 @@
 <template lang="html">
-    <div class="NotesList"
-        v-bind:class="{ 'NotesList--largeHeight': editMode }">
-        <div class="General__Container">
-            <annotation v-for="annotation in allAnnotations"
-                v-bind:annotation="annotation.doc"
-                v-on:EDIT_MODE="hiddenBottomBar"
-                v-on:DELETE_ANNOTATION="deleteAnnotation"
-                v-on:EDIT_ANNOTATION="editAnnotation"></annotation>
+    <div>
+        <div class="Alert--default"
+            v-show="alertText">
+            <div class="General__Container">
+                {{ alertText }}
+            </div>
+        </div>
+
+        <div class="NotesList"
+            v-bind:class="{ 'NotesList--largeHeight': editMode }">
+            <div class="General__Container">
+                <annotation v-for="annotation in allAnnotations"
+                    v-bind:annotation="annotation.doc"
+                    v-on:EDIT_MODE="hiddenBottomBar"
+                    v-on:DELETE_ANNOTATION="deleteAnnotation"
+                    v-on:EDIT_ANNOTATION="editAnnotation"></annotation>
+            </div>
         </div>
     </div>
 </template>
@@ -27,6 +36,7 @@
         },
         data() {
             return {
+                alertText: '',
                 allAnnotations: [],
                 editMode: false,
             };
@@ -46,6 +56,13 @@
             },
         },
         methods: {
+            alert(text) {
+                this.alertText = text;
+
+                setTimeout(() => {
+                    this.alertText = '';
+                }, 4000);
+            },
             listNotes() {
                 this.db.allDocs(
                     {
@@ -60,10 +77,12 @@
             deleteAnnotation(annotation) {
                 this.db.remove(annotation);
                 this.listNotes();
+                this.alert('Anotação deletada com sucesso.');
             },
             editAnnotation(annotation) {
                 this.db.put(annotation);
                 this.listNotes();
+                this.alert('Anotação alterada com sucesso.');
             },
             hiddenBottomBar(status) {
                 this.editMode = status;

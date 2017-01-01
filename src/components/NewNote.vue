@@ -35,6 +35,13 @@
             };
         },
         methods: {
+            alert(text) {
+                this.alertText = text;
+
+                setTimeout(() => {
+                    this.alertText = '';
+                }, 4000);
+            },
             saveAnnotation() {
                 if (this.annotationText) {
                     const annotation = {
@@ -49,11 +56,7 @@
                         if (!err) {
                             this.$emit('SYNC_DATA', true);
 
-                            this.alertText = 'Anotação salva com sucesso.';
-
-                            setTimeout(() => {
-                                this.alertText = '';
-                            }, 4000);
+                            this.alert('Anotação salva com sucesso.');
                         }
                     });
                     this.annotationText = '';

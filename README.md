@@ -9,7 +9,7 @@ Está é a projeção de como o App vai ficar depois de pronto:
 
 ![Projeção do App](screenshots/projecao-app.png)
 
-## Tarefas (16/21)
+## Tarefas (17/21)
 * (x) Criação do projeto
 * (x) Criação do design do App
 * (x) Definição das tarefas
