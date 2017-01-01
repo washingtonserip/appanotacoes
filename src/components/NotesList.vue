@@ -128,7 +128,7 @@
     	background rgba(221,221,221,1)
 
     .NotesList
-        height 62.668vh
+        height 69.959vh // 62.668vh
         padding 15px 0 10px
         overflow auto
 

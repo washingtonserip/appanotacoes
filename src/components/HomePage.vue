@@ -10,7 +10,7 @@
 
         <div class="BottomBar"
             v-show="!hiddenBottomBar">
-            <notification-bar></notification-bar>
+            <!-- <notification-bar></notification-bar> -->
 
             <new-note v-on:SYNC_DATA="syncData = true"></new-note>
         </div>
