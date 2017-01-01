@@ -39,7 +39,7 @@
 
             <div class="NoticeModal__Box">
                 <div class="NoticeModal__Text">
-                    Você está preste a excluir uma nota,<br /> deseja continar?
+                    Você está prestes a excluir uma nota,<br /> deseja continar?
                 </div>
 
                 <button type="button"
