@@ -17,7 +17,7 @@
                     v-on:EDIT_ANNOTATION="editAnnotation"></annotation>
 
                 <div class="General__Content--alignCenter"
-                    v-show="(!annotationsList || !annotationsList[0]) && favoritesOnly">
+                    v-show="(!annotationsList || !annotationsList[0]) && (favoritesOnly || search)">
                     <p>
                         Nenhuma anotação foi encontrada.
                     </p>

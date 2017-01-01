@@ -5,7 +5,7 @@
 
         <div class="NoticeModal__Box">
             <div class="NoticeModal__Text">
-                Este site é apenas uma demonstração do projeto <a href="https://github.com/washingtonbr/appanotacoes" target="_blank">App Anotações</a> <i>(Ainda em desenvolvimento)</i>.
+                Este site é apenas uma demonstração do projeto <a href="https://github.com/washingtonbr/appanotacoes" target="_blank">App Anotações</a> <i>(Versão beta)</i>.
             </div>
 
             <button type="button"
