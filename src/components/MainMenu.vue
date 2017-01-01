@@ -5,12 +5,17 @@
             v-on:click="closeMenu"></div>
 
         <ul class="MainMenu__Sidebar">
-            <li class="MainMenu__Sidebar--active"><a href="#">Todas as Anotações</a></li>
-            <li><a href="#">Favoritos</a></li>
-            <li><a href="#">Lixeira</a></li>
-            <li><a href="#">Configurações</a></li>
-            <li><a href="#">Guia de Uso</a></li>
-            <li><a href="#">Sobre o APP</a></li>
+            <li v-bind:class="{ 'MainMenu__Sidebar--active': pageActive === 'home' }">
+                <router-link to="/">Todas as Anotações</router-link>
+            </li>
+
+            <li v-bind:class="{ 'MainMenu__Sidebar--active': pageActive === 'favorites' }">
+                <router-link to="/favoritos">Favoritos</router-link>
+            </li>
+
+            <li v-bind:class="{ 'MainMenu__Sidebar--active': pageActive === 'about' }">
+                <router-link to="/sobre">Sobre o APP</router-link>
+            </li>
         </ul>
     </div>
 </template>
@@ -22,6 +27,12 @@
                 type: Boolean,
                 default() {
                     return false;
+                },
+            },
+            pageActive: {
+                type: String,
+                default() {
+                    return '';
                 },
             },
         },

@@ -1,6 +1,7 @@
 <template>
     <div>
         <main-menu v-bind:open="menuStatus"
+            v-bind:page-active="pageActive"
             v-on:CLOSE_MENU="changeMenuStatus"></main-menu>
 
         <div class="AppHeader">
@@ -12,8 +13,12 @@
                     {{ pageTitle }}
                 </div>
 
-                <router-link to="/favorites"
+                <router-link to="/favoritos"
+                    v-show="pageActive === 'home'"
                     class="AppHeader__Icon--bookmarks AppHeader__FlexboxItem"></router-link>
+                <router-link to="/"
+                    v-show="pageActive !== 'home'"
+                    class="AppHeader__Icon--leftArrow AppHeader__FlexboxItem"></router-link>
             </div>
         </div>
     </div>
@@ -28,6 +33,12 @@
                 type: String,
                 default() {
                     return 'appAnotacoes.com.br';
+                },
+            },
+            pageActive: {
+                type: String,
+                default() {
+                    return '';
                 },
             },
         },
@@ -91,6 +102,10 @@
             &--bookmarks
                 @extend .AppHeader__Icon
                 background-image url("../assets/svg/bookmarks.svg")
+
+            &--leftArrow
+                @extend .AppHeader__Icon
+                background-image url("../assets/svg/left-arrow.svg")
 
         .__Title
             color rgb(255,255,255)

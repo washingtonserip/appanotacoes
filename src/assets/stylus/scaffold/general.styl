@@ -1,7 +1,34 @@
 // General
-+prefix-classes("General__")
-    .Container
++prefix-classes("General")
+    .__Container
         margin 0 auto
         max-width 720px
         padding 0 3.13vw
         width 100%
+
+    .__Content
+        background-color rgba(255,255,255,1)
+        border 1px solid rgba(52,67,86,0.5)
+        padding 25px 20px
+
+        p
+            margin-bottom 15px
+
+            &:last-child
+                margin-bottom 0
+
+        a
+            color rgb(50,99,163)
+
+        &--alignCenter
+            @extend .General__Content
+            text-align center
+
+        &--margin
+            @extend .General__Content
+            margin 15px 0
+
+        &--error404
+            @extend .General__Content
+            margin 15px 0
+            text-align center

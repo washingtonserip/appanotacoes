@@ -1,6 +1,6 @@
 <template lang="html">
     <div class="HomePage">
-        <app-header></app-header>
+        <app-header v-bind:page-active="pageActive"></app-header>
 
         <search-bar></search-bar>
 
@@ -29,6 +29,7 @@
             return {
                 syncData: false,
                 hiddenBottomBar: false,
+                pageActive: 'home',
             };
         },
         components: {

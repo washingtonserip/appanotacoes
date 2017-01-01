@@ -8,13 +8,20 @@
         </div>
 
         <div class="NotesList"
-            v-bind:class="{ 'NotesList--largeHeight': editMode }">
+            v-bind:class="{ 'NotesList--largeHeight': editMode || favoritesOnly }">
             <div class="General__Container">
-                <annotation v-for="annotation in allAnnotations"
+                <annotation v-for="annotation in annotationsList"
                     v-bind:annotation="annotation.doc"
                     v-on:EDIT_MODE="hiddenBottomBar"
                     v-on:DELETE_ANNOTATION="deleteAnnotation"
                     v-on:EDIT_ANNOTATION="editAnnotation"></annotation>
+
+                <div class="General__Content--alignCenter"
+                    v-show="(!annotationsList || !annotationsList[0]) && favoritesOnly">
+                    <p>
+                        Nenhuma anotação foi encontrada.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -28,6 +35,12 @@
     export default {
         props: {
             syncData: {
+                type: Boolean,
+                default() {
+                    return false;
+                },
+            },
+            favoritesOnly: {
                 type: Boolean,
                 default() {
                     return false;
@@ -48,6 +61,11 @@
         computed: {
             db() {
                 return new PouchDB('appanotacoes');
+            },
+            annotationsList() {
+                return (this.favoritesOnly) ?
+                    this.allAnnotations.filter(item => item.doc.favorite) :
+                    this.allAnnotations;
             },
         },
         watch: {

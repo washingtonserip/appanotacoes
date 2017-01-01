@@ -3,7 +3,7 @@
         v-bind:class="{ 'Annotation__Active': editMode }"
         v-show="annotation">
         <textarea class="Annotation__Textarea"
-            ref="annotationtextarea"
+            ref="annotationTextarea"
             v-model="annotation.text"
             v-bind:style="{ height: annotationHeight }"
             v-show="editMode"></textarea>
@@ -72,9 +72,13 @@
             };
         },
         watch: {
-            editMode() {
+            editMode(newVal) {
                 this.annotationHeight = `${this.$refs.annotationText.offsetHeight}px`;
                 this.$emit('EDIT_MODE', this.editMode);
+
+                if (newVal) {
+                    this.$refs.annotationTextarea.setAttribute('autofocus', '');
+                }
             },
         },
         methods: {
@@ -83,11 +87,13 @@
             },
             deleteAnnotation() {
                 this.editMode = false;
+                this.$refs.annotationTextarea.removeAttribute('autofocus');
                 this.modalExclusionStatus = false;
                 this.$emit('DELETE_ANNOTATION', this.annotation);
             },
             editAnnotation() {
                 this.editMode = false;
+                this.$refs.annotationTextarea.removeAttribute('autofocus');
                 this.$emit('EDIT_ANNOTATION', this.annotation);
             },
             favoriteAnnotation() {

@@ -6,6 +6,8 @@ import Router from 'vue-router';
 import App from './App';
 import HomePage from './components/HomePage';
 import FavoritesPage from './components/FavoritesPage';
+import AboutPage from './components/AboutPage';
+import Error404Page from './components/Error404Page';
 
 Vue.use(Router);
 
@@ -15,8 +17,16 @@ const routes = [
         component: HomePage,
     },
     {
-        path: '/favorites',
+        path: '/favoritos',
         component: FavoritesPage,
+    },
+    {
+        path: '/sobre',
+        component: AboutPage,
+    },
+    {
+        path: '/*',
+        component: Error404Page,
     },
 ];
 

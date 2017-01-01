@@ -9,7 +9,7 @@ Está é a projeção de como o App vai ficar depois de pronto:
 
 ![Projeção do App](screenshots/projecao-app.png)
 
-## Tarefas (18/21)
+## Tarefas (20/21)
 * (x) Criação do projeto
 * (x) Criação do design do App
 * (x) Definição das tarefas
@@ -25,10 +25,10 @@ Está é a projeção de como o App vai ficar depois de pronto:
 * (x) Função de marcar uma anotação como favorita
 * (x) Função de excluir uma anotação
 * (x) Implementar suporte a páginas - VueRouter
-* (&nbsp;&nbsp;) Componente de Página
+* (x) Componente de Página
 * (x) Componente de Menu
 * (&nbsp;&nbsp;) Função pesquisar por anotações
-* (&nbsp;&nbsp;) Listagem de anotações favoritadas
+* (x) Listagem de anotações favoritadas
 * (x) Componente de modal de aviso inicial
 * (x) Balão de aviso
 
