@@ -34,6 +34,11 @@
                 alertText: '',
             };
         },
+        computed: {
+            db() {
+                return new PouchDB('appanotacoes');
+            },
+        },
         methods: {
             alert(text) {
                 this.alertText = text;
@@ -50,15 +55,15 @@
                         text: this.annotationText,
                     };
 
-                    const db = new PouchDB('appanotacoes');
+                    this.db.put(annotation,
+                        (err) => {
+                            if (!err) {
+                                this.$emit('SYNC_DATA', true);
 
-                    db.put(annotation, (err) => {
-                        if (!err) {
-                            this.$emit('SYNC_DATA', true);
-
-                            this.alert('Anotação salva com sucesso.');
-                        }
-                    });
+                                this.alert('Anotação salva com sucesso.');
+                            }
+                        },
+                    );
                     this.annotationText = '';
                 }
             },

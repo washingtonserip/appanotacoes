@@ -39,6 +39,7 @@
                 alertText: '',
                 allAnnotations: [],
                 editMode: false,
+                defaultAnnotation: 'Crie, edite e favorite suas anotações.',
             };
         },
         components: {
@@ -63,6 +64,23 @@
                     this.alertText = '';
                 }, 4000);
             },
+            checkAllAnnotations() {
+                if (!this.allAnnotations || !this.allAnnotations[0]) {
+                    const annotation = {
+                        _id: new Date().toISOString(),
+                        favorite: false,
+                        text: this.defaultAnnotation,
+                    };
+
+                    this.db.put(annotation,
+                        (err) => {
+                            if (!err) {
+                                this.listNotes();
+                            }
+                        },
+                    );
+                }
+            },
             listNotes() {
                 this.db.allDocs(
                     {
@@ -71,7 +89,8 @@
                     },
                     (err, doc) => {
                         this.allAnnotations = doc.rows;
-                    }
+                        this.checkAllAnnotations();
+                    },
                 );
             },
             deleteAnnotation(annotation) {
