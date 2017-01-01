@@ -1,6 +1,6 @@
 <template lang="html">
     <div class="Annotation"
-        v-bind:class="{ Annotation__Active: editMode }"
+        v-bind:class="{ 'Annotation__Active': editMode }"
         v-show="annotation">
         <textarea class="Annotation__Textarea"
             ref="annotationtextarea"
@@ -22,10 +22,30 @@
                 v-on:click="editMode = true"></button>
 
             <button class="Annotation__OptionsBtn--delete"
-                v-show="editMode"></button>
+                v-show="editMode"
+                v-on:click="modalExclusion"></button>
             <button class="Annotation__OptionsBtn--check"
                 v-show="editMode"
-                v-on:click="editMode = false"></button>
+                v-on:click="editAnnotation"></button>
+        </div>
+
+        <div class="ConfirmationMode"
+            v-show="modalExclusionStatus">
+            <div class="NoticeModal__Mask"></div>
+
+            <div class="NoticeModal__Box">
+                <div class="NoticeModal__Text">
+                    Você está preste a excluir uma nota,<br /> deseja continar?
+                </div>
+
+                <button type="button"
+                    class="NoticeModal__Btn--secondary"
+                    v-on:click="modalExclusionStatus = false">Não</button>
+
+                <button type="button"
+                    class="NoticeModal__Btn"
+                    v-on:click="deleteAnnotation">Sim</button>
+            </div>
         </div>
     </div>
 </template>
@@ -44,11 +64,27 @@
             return {
                 editMode: false,
                 annotationHeight: '',
+                modalExclusionStatus: false,
             };
         },
         watch: {
             editMode() {
                 this.annotationHeight = `${this.$refs.testeste.offsetHeight}px`;
+                this.$emit('EDIT_MODE', this.editMode);
+            },
+        },
+        methods: {
+            modalExclusion() {
+                this.modalExclusionStatus = true;
+            },
+            deleteAnnotation() {
+                this.editMode = false;
+                this.modalExclusionStatus = false;
+                this.$emit('DELETE_ANNOTATION', this.annotation);
+            },
+            editAnnotation() {
+                this.editMode = false;
+                this.$emit('EDIT_ANNOTATION', this.annotation);
             },
         },
     };
@@ -64,6 +100,7 @@
     +prefix-classes("Annotation")
         .__Active
             background-color rgba(50,99,163,1)
+            border-color rgba(50,99,163,1)
 
         .__Text
             background-color rgba(255,255,255,1)

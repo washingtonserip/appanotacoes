@@ -23,7 +23,7 @@ Está é a projeção de como o App vai ficar depois de pronto:
 * (x) Função para listar as anotações
 * (x) Função de salvar uma anotação
 * (&nbsp;&nbsp;) Função de marcar uma anotação como favorita
-* (&nbsp;&nbsp;) Função de excluir uma anotação
+* (x) Função de excluir uma anotação
 * (x) Implementar suporte a páginas - VueRouter
 * (&nbsp;&nbsp;) Componente de Página
 * (x) Componente de Menu

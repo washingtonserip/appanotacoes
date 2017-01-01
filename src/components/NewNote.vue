@@ -1,31 +1,61 @@
 <template lang="html">
-    <div class="NewNote">
-        <div class="General__Container">
-            <div class="NewNote__Box">
-                <textarea name="note"
-                    class="NewNote__Field"
-                    v-model="annotationText"
-                    placeholder="Criar uma nova anotação"></textarea>
+    <div>
+        <div class="Alert--default"
+            v-show="alertText">
+            <div class="General__Container">
+                {{ alertText }}
+            </div>
+        </div>
 
-                <button type="button"
-                    class="NewNote__Btn"
-                    v-on:click="saveAnnotation">Criar</button>
+        <div class="NewNote">
+            <div class="General__Container">
+                <div class="NewNote__Box">
+                    <textarea name="note"
+                        class="NewNote__Field"
+                        v-model="annotationText"
+                        placeholder="Criar uma nova anotação"></textarea>
+
+                    <button type="button"
+                        class="NewNote__Btn"
+                        v-on:click="saveAnnotation">Criar</button>
+                </div>
             </div>
         </div>
     </div>
 </template>
 
 <script type="text/babel">
+    import PouchDB from 'pouchdb';
+
     export default {
         data() {
             return {
                 annotationText: '',
+                alertText: '',
             };
         },
         methods: {
             saveAnnotation() {
                 if (this.annotationText) {
-                    this.$emit('SAVE_ANNOTATION', this.annotationText);
+                    const annotation = {
+                        _id: new Date().toISOString(),
+                        favorite: false,
+                        text: this.annotationText,
+                    };
+
+                    const db = new PouchDB('appanotacoes');
+
+                    db.put(annotation, (err) => {
+                        if (!err) {
+                            this.$emit('SYNC_DATA', true);
+
+                            this.alertText = 'Anotação salva com sucesso.';
+
+                            setTimeout(() => {
+                                this.alertText = '';
+                            }, 4000);
+                        }
+                    });
                     this.annotationText = '';
                 }
             },

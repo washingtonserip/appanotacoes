@@ -1,26 +1,77 @@
 <template lang="html">
-    <div class="NotesList">
+    <div class="NotesList"
+        v-bind:class="{ 'NotesList--largeHeight': editMode }">
         <div class="General__Container">
-            <annotation v-for="annotation in annotations"
-                v-bind:annotation="annotation.doc"></annotation>
+            <annotation v-for="annotation in allAnnotations"
+                v-bind:annotation="annotation.doc"
+                v-on:EDIT_MODE="hiddenBottomBar"
+                v-on:DELETE_ANNOTATION="deleteAnnotation"
+                v-on:EDIT_ANNOTATION="editAnnotation"></annotation>
         </div>
     </div>
 </template>
 
 <script type="text/babel">
+    import PouchDB from 'pouchdb';
+
     import Annotation from './Annotation';
 
     export default {
         props: {
-            annotations: {
-                type: Array,
+            syncData: {
+                type: Boolean,
                 default() {
-                    return [];
+                    return false;
                 },
             },
         },
+        data() {
+            return {
+                allAnnotations: [],
+                editMode: false,
+            };
+        },
         components: {
             Annotation,
+        },
+        computed: {
+            db() {
+                return new PouchDB('appanotacoes');
+            },
+        },
+        watch: {
+            syncData() {
+                this.$emit('SYNC_DATA', false);
+                this.listNotes();
+            },
+        },
+        methods: {
+            listNotes() {
+                this.db.allDocs(
+                    {
+                        include_docs: true,
+                        descending: true,
+                    },
+                    (err, doc) => {
+                        this.allAnnotations = doc.rows;
+                    }
+                );
+            },
+            deleteAnnotation(annotation) {
+                this.db.remove(annotation);
+                this.listNotes();
+            },
+            editAnnotation(annotation) {
+                this.db.put(annotation);
+                this.listNotes();
+            },
+            hiddenBottomBar(status) {
+                this.editMode = status;
+                this.$emit('HIDDEN_BOTTOM_BAR', status);
+            },
+        },
+        mounted() {
+            this.listNotes();
         },
     };
 </script>
@@ -42,4 +93,7 @@
         height 62.668vh
         padding 15px 0 10px
         overflow auto
+
+        &--largeHeight
+            height 81.3vh
 </style>

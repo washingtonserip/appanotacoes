@@ -1,27 +1,23 @@
 <template lang="html">
     <div class="HomePage">
-        <div class="Alert--default"
-            v-show="alertText">
-            {{ alertText }}
-        </div>
-
         <app-header></app-header>
 
         <search-bar></search-bar>
 
-        <notes-list v-bind:annotations="allAnnotations"></notes-list>
+        <notes-list v-bind:sync-data="syncData"
+            v-on:SYNC_DATA="syncData = false"
+            v-on:HIDDEN_BOTTOM_BAR="bottomBarModify"></notes-list>
 
-        <div class="BottomBar">
+        <div class="BottomBar"
+            v-show="!hiddenBottomBar">
             <notification-bar></notification-bar>
 
-            <new-note v-on:SAVE_ANNOTATION="saveAnnotation"></new-note>
+            <new-note v-on:SYNC_DATA="syncData = true"></new-note>
         </div>
     </div>
 </template>
 
 <script>
-    import PouchDB from 'pouchdb';
-
     import AppHeader from './AppHeader';
     import SearchBar from './SearchBar';
     import NotesList from './NotesList';
@@ -31,8 +27,8 @@
     export default {
         data() {
             return {
-                allAnnotations: [],
-                alertText: '',
+                syncData: false,
+                hiddenBottomBar: false,
             };
         },
         components: {
@@ -43,43 +39,9 @@
             NewNote,
         },
         methods: {
-            listNotes() {
-                const db = new PouchDB('appanotacoes');
-
-                db.allDocs(
-                    {
-                        include_docs: true,
-                        descending: true,
-                    },
-                    (err, doc) => {
-                        this.allAnnotations = doc.rows;
-                    }
-                );
+            bottomBarModify(status) {
+                this.hiddenBottomBar = status;
             },
-            saveAnnotation(text) {
-                const annotation = {
-                    _id: new Date().toISOString(),
-                    favorite: false,
-                    text,
-                };
-
-                const db = new PouchDB('appanotacoes');
-
-                db.put(annotation, (err) => {
-                    if (!err) {
-                        this.listNotes();
-
-                        this.alertText = 'Anotação salva com sucesso.';
-
-                        setTimeout(() => {
-                            this.alertText = '';
-                        }, 4000);
-                    }
-                });
-            },
-        },
-        mounted() {
-            this.listNotes();
         },
     };
 </script>
