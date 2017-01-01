@@ -9,14 +9,18 @@
             v-show="editMode"></textarea>
 
         <div class="Annotation__Text"
-            ref="testeste"
+            ref="annotationText"
             v-show="!editMode">
             {{ annotation.text }}
         </div>
 
         <div class="Annotation__Options">
             <button class="Annotation__OptionsBtn--favorite"
-                v-show="!editMode"></button>
+                v-show="!editMode && !annotation.favorite"
+                v-on:click="favoriteAnnotation"></button>
+            <button class="Annotation__OptionsBtn--favoriteActive"
+                v-show="!editMode && annotation.favorite"
+                v-on:click="favoriteAnnotation"></button>
             <button class="Annotation__OptionsBtn--edit"
                 v-show="!editMode"
                 v-on:click="editMode = true"></button>
@@ -69,7 +73,7 @@
         },
         watch: {
             editMode() {
-                this.annotationHeight = `${this.$refs.testeste.offsetHeight}px`;
+                this.annotationHeight = `${this.$refs.annotationText.offsetHeight}px`;
                 this.$emit('EDIT_MODE', this.editMode);
             },
         },
@@ -84,6 +88,11 @@
             },
             editAnnotation() {
                 this.editMode = false;
+                this.$emit('EDIT_ANNOTATION', this.annotation);
+            },
+            favoriteAnnotation() {
+                this.editMode = false;
+                this.annotation.favorite = !this.annotation.favorite;
                 this.$emit('EDIT_ANNOTATION', this.annotation);
             },
         },
@@ -142,6 +151,10 @@
             &--favorite
                 @extend .Annotation__OptionsBtn
                 background-image url("../assets/svg/star.svg")
+
+            &--favoriteActive
+                @extend .Annotation__OptionsBtn
+                background-image url("../assets/svg/starFilled.svg")
 
             &--edit
                 @extend .Annotation__OptionsBtn
