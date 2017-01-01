@@ -46,6 +46,12 @@
                     return false;
                 },
             },
+            search: {
+                type: String,
+                default() {
+                    return '';
+                },
+            },
         },
         data() {
             return {
@@ -63,9 +69,19 @@
                 return new PouchDB('appanotacoes');
             },
             annotationsList() {
-                return (this.favoritesOnly) ?
-                    this.allAnnotations.filter(item => item.doc.favorite) :
-                    this.allAnnotations;
+                if (this.search) {
+                    const searchRE = new RegExp(this.search.toLowerCase(), 'g');
+
+                    return this.allAnnotations.filter((item) => {
+                        const itemText = item.doc.text.toLowerCase();
+
+                        return itemText.match(searchRE);
+                    });
+                } else if (this.favoritesOnly) {
+                    return this.allAnnotations.filter(item => item.doc.favorite);
+                }
+
+                return this.allAnnotations;
             },
         },
         watch: {

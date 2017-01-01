@@ -27,7 +27,7 @@ Está é a projeção de como o App vai ficar depois de pronto:
 * (x) Implementar suporte a páginas - VueRouter
 * (x) Componente de Página
 * (x) Componente de Menu
-* (&nbsp;&nbsp;) Função pesquisar por anotações
+* (x) Função de pesquisar por anotações
 * (x) Listagem de anotações favoritadas
 * (x) Componente de modal de aviso inicial
 * (x) Balão de aviso

@@ -4,7 +4,7 @@
             <div class="SearchBar__Box">
                 <input type="text"
                     class="SearchBar__Field"
-                    name="search"
+                    v-model="search"
                     placeholder="Pesquise por anotações...">
 
                 <button type="button"
@@ -17,7 +17,15 @@
 
 <script type="text/babel">
     export default {
-        mounted() {
+        data() {
+            return {
+                search: '',
+            };
+        },
+        watch: {
+            search(newVal) {
+                this.$emit('SEARCH', newVal);
+            },
         },
     };
 </script>

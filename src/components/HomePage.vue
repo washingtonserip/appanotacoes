@@ -2,9 +2,10 @@
     <div class="HomePage">
         <app-header v-bind:page-active="pageActive"></app-header>
 
-        <search-bar></search-bar>
+        <search-bar v-on:SEARCH="searchIt"></search-bar>
 
         <notes-list v-bind:sync-data="syncData"
+            v-bind:search="searchVal"
             v-on:SYNC_DATA="syncData = false"
             v-on:HIDDEN_BOTTOM_BAR="bottomBarModify"></notes-list>
 
@@ -30,6 +31,7 @@
                 syncData: false,
                 hiddenBottomBar: false,
                 pageActive: 'home',
+                searchVal: '',
             };
         },
         components: {
@@ -42,6 +44,9 @@
         methods: {
             bottomBarModify(status) {
                 this.hiddenBottomBar = status;
+            },
+            searchIt(newVal) {
+                this.searchVal = newVal;
             },
         },
     };
