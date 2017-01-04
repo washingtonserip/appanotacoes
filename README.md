@@ -1,57 +1,43 @@
 # App Anotações
 
-> Um Web App de anotações em VueJS
+> Acesse este projeto em seu navegador: [AppAnotacoes.com.br](http://appanotacoes.com.br/) *(versão beta)*
 
-Acesse este projeto em seu navegador: [AppAnotacoes.com.br](http://appanotacoes.com.br/) *(em desenvolvimento)*
+## COMANDOS BÁSICOS
+É necessário a instalação prévia do [Node.js](https://nodejs.org/en/) e (Yarn)[https://yarnpkg.com/].
+``` bash
+# Instala dependências
+yarn install
+
+# Executa o projeto em localhost:8080
+yarn run dev
+
+# Gera a versão de produção do projeto
+yarn run build
+```
+No momento não existe uma documentação detalhada para este projeto.
+Em breve listarei links com informações uteis para ajuda-lo a compreender este projeto e as tecnologias envolvidas.
 
 ## Design
 Está é a projeção de como o App vai ficar depois de pronto:
 
 ![Projeção do App](screenshots/projecao-app.png)
 
-## Tarefas (20/21)
-* (x) Criação do projeto
-* (x) Criação do design do App
-* (x) Definição das tarefas
-* (x) Implementação Webpack
-* (x) Componente de topo
-* (x) Componente de busca
-* (x) Componente anotação
-* (x) Comportamento de edição no componente de anotação
-* (x) Componente de aviso
-* (x) Componente de nova anotação
-* (x) Função para listar as anotações
-* (x) Função de salvar uma anotação
-* (x) Função de marcar uma anotação como favorita
-* (x) Função de excluir uma anotação
-* (x) Implementar suporte a páginas - VueRouter
-* (x) Componente de Página
-* (x) Componente de Menu
-* (x) Função de pesquisar por anotações
-* (x) Listagem de anotações favoritadas
-* (x) Componente de modal de aviso inicial
-* (x) Balão de aviso
+## SOBRE O PROJETO
+O AppAnotações.com.br é um simples web app para você guardar textos curtos (com opções para você favoritar, editar e excluir suas anotações). Você não precisar se cadastrar ou logar para poder utilizar este App e mais, ele é gratuito.
 
-## Build Setup
+Todos os dados inseridos no app são salvos no seu aparelho (o mesmo é compatível com diversos dispositivos e sistemas operacionais diferentes - inclusive computadores tradicionais). Portanto os dados não são armazenados em nenhum servidor e não podem ser acessados a partir de outro aparelho.
 
-``` bash
-# install dependencies
-yarn install
+Este é um projeto com fins acadêmicos, não foi desenvolvido com real intenção de ser um Web App popular entre os usuários finais. O AppAnotações é OPEN SOURCE. Se você é programador ou um entusiasta, você pode acessar, usar e contribuir (eu ficaria grato por isto) com o código fonte desse projeto no GitHub.
 
-# serve with hot reload at localhost:8080
-yarn run dev
-
-# build for production with minification
-yarn run build
-
-# run unit tests
-yarn run unit
-
-# run e2e tests
-yarn run e2e
-
-# run all tests
-yarn test
-```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## RECURSOS
+* [x] Dados off-line
+* [x] Compatibilidade com todos os sistemas operacionais
+* [x] Criação, edição e exclusão de anotações
+* [x] Favoritar anotação
+* [x] Pesquisar por anotações
+* [x] Layout responsivo (se adapta a resolução da tela)
+* [ ] Lixeira (lista de anotações excluídas)
+* [ ] Configurações do App
+* [ ] Backup externo
+* [ ] Senha para acesso no App
+* [ ] Criptografia dos dados
