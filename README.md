@@ -2,7 +2,7 @@
 
 > Acesse este projeto em seu navegador: [AppAnotacoes.com.br](http://appanotacoes.com.br/) *(versão beta)*
 
-## COMANDOS BÁSICOS
+## Comandos básicos
 É necessário a instalação prévia do [Node.js](https://nodejs.org/en/) e (Yarn)[https://yarnpkg.com/].
 ``` bash
 # Instala dependências
@@ -22,14 +22,14 @@ Está é a projeção de como o App vai ficar depois de pronto:
 
 ![Projeção do App](screenshots/projecao-app.png)
 
-## SOBRE O PROJETO
+## Sobre o projeto
 O AppAnotações.com.br é um simples web app para você guardar textos curtos (com opções para você favoritar, editar e excluir suas anotações). Você não precisar se cadastrar ou logar para poder utilizar este App e mais, ele é gratuito.
 
 Todos os dados inseridos no app são salvos no seu aparelho (o mesmo é compatível com diversos dispositivos e sistemas operacionais diferentes - inclusive computadores tradicionais). Portanto os dados não são armazenados em nenhum servidor e não podem ser acessados a partir de outro aparelho.
 
 Este é um projeto com fins acadêmicos, não foi desenvolvido com real intenção de ser um Web App popular entre os usuários finais. O AppAnotações é OPEN SOURCE. Se você é programador ou um entusiasta, você pode acessar, usar e contribuir (eu ficaria grato por isto) com o código fonte desse projeto no GitHub.
 
-## RECURSOS
+## Recursos
 * [x] Dados off-line
 * [x] Compatibilidade com todos os sistemas operacionais
 * [x] Criação, edição e exclusão de anotações
