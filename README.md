@@ -3,7 +3,7 @@
 > Acesse este projeto em seu navegador: [AppAnotacoes.com.br](http://appanotacoes.com.br/) *(versão beta)*
 
 ## Comandos básicos
-É necessário a instalação prévia do [Node.js](https://nodejs.org/en/) e (Yarn)[https://yarnpkg.com/].
+É necessário a instalação prévia do [Node.js](https://nodejs.org/en/) e [Yarn](https://yarnpkg.com/).
 ``` bash
 # Instala dependências
 yarn install
