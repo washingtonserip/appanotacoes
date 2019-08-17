@@ -3,16 +3,16 @@
 > Acesse este projeto em seu navegador: [AppAnotacoes.com.br](http://appanotacoes.com.br/) *(versão beta)*
 
 ## Comandos básicos
-É necessário a instalação prévia do [Node.js](https://nodejs.org/en/) e [Yarn](https://yarnpkg.com/).
+É necessário a instalação prévia do [Node.js](https://nodejs.org/en/).
 ``` bash
 # Instala dependências
-yarn install
+npm install
 
 # Executa o projeto em localhost:8080
-yarn run dev
+npm run dev
 
 # Gera a versão de produção do projeto
-yarn run build
+npm run build
 ```
 No momento não existe uma documentação detalhada para este projeto.
 Em breve listarei links com informações uteis para ajuda-lo a compreender este projeto e as tecnologias envolvidas.
